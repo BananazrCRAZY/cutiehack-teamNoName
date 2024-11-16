@@ -1,3 +1,6 @@
+#ifndef USERINFO_H
+#define USERINFO_H
+
 #include <iostream>
 #include "stdlib.h"
 using namespace std;
