@@ -5,6 +5,10 @@
 
 using namespace std;
 
+Menu::Menu(userInfo* menuOption){
+    user = menuOption;
+}
+
 void Menu::showMenu(){
     int userInput;
 
@@ -16,4 +20,27 @@ void Menu::showMenu(){
     cout << "3: Show Expenses" << endl;
     cout << "4: Add Expense" << endl;
     cout << "5: Quit" << endl;
+
+    cin >> userInput;
+    cout << endl;
+
+    if(userInput == 1){
+        
+    }
+
+    if(userInput == 1){
+        
+    }
+
+    if(userInput == 1){
+        
+    }
+
+    if(userInput == 1){
+        
+    }
+
+    if(userInput == 1){
+        
+    }
 }

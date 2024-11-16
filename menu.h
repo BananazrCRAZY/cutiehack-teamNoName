@@ -10,6 +10,7 @@ class Menu{
 
     public:
     void showMenu();
+    Menu(userInfo* menuOption);
 };
 
 #endif

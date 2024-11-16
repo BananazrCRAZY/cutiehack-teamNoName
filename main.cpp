@@ -24,7 +24,7 @@ int main(){
     cout << endl;
 
     userInfo *user = new userInfo(income, name);
-    Menu *menu = new Menu();
+    Menu *menu = new Menu(user);
     while (running) {
 
         bool answered = false;
