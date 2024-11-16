@@ -29,9 +29,12 @@ int main(){
 
         bool answered = false;
         while (!answered) {
-                menu->showMenu();
-            }
+            menu->showMenu();
         }
+    }
+
+    delete user;
+    delete menu;
 
     return 0;
     }   
