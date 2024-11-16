@@ -11,8 +11,8 @@ class userInfo {
         string _name;
     public:
         userInfo(double income = 0, string name = "noName");
-        setIncome(double income);
-        setName(string name);
+        void setIncome(double income);
+        void setName(string name);
 };
 
 #endif
