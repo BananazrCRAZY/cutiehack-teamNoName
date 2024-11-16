@@ -13,6 +13,8 @@ class userInfo {
         userInfo(double income = 0, string name = "noName");
         void setIncome(double income);
         void setName(string name);
+        string getName();
+        double getIncome();
 };
 
 #endif

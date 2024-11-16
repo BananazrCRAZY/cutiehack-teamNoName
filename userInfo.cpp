@@ -9,3 +9,11 @@ void userInfo::setIncome(double income) {
 void userInfo::setName(string name) {
     _name = name;
 }
+
+string userInfo::getName(){
+    return _name;
+}
+
+double userInfo::getIncome(){
+    return _income;
+}
