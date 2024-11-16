@@ -28,7 +28,7 @@ void Menu::showMenu(){
         cout << endl;
 
         if(userInput == 1){
-            
+            showBudget();
         } else if(userInput == 2){
             
         } else if(userInput == 3){
@@ -43,7 +43,30 @@ void Menu::showMenu(){
     }
 }
 
-void Menu::showBudget();
-void Menu::setBudget();
+void Menu::showBudget() {
+    user->printBudgets();
+}
+
+void Menu::setBudget() {
+    cout << "PRESS ONE OF THE FOLLOWING NUMBERS" << endl;
+    cout << "1: Change/Set Income" << endl;
+    cout << "2: Change/Set Budget %" << endl;
+
+    int answer = 0;
+    cin >> answer;
+
+    if (answer == 1) {
+        cout << "Input new Income: ";
+        double newIncome = 0;
+        user->setIncome(newIncome);
+    } else if (answer == 2) {
+        user->printBudgets();
+        cout << "Input a number for the Category you wish to edit: ";
+        unsigned index = 0;
+        cin >> index;
+        cout << "Input a new budget %"
+    }
+}
+
 void Menu::showExpenses();
 void Menu::addExpense();
