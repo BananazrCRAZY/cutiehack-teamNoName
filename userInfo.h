@@ -3,5 +3,4 @@
 class userInfo {
     private:
         double income;
-        
 };
