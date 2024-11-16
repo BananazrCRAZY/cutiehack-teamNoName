@@ -19,19 +19,10 @@ int main(){
     cin >> income;
     cout << endl;
 
-    cout << "Please Input The Percent You Would like To Budget: ";
-    cin >> percent;
-    cout << endl;
-
     userInfo *user = new userInfo(income, name);
     Menu *menu = new Menu(user);
-    while (running) {
 
-        bool answered = false;
-        while (!answered) {
-            menu->showMenu();
-        }
-    }
+    menu->showMenu();
 
     delete user;
     delete menu;
