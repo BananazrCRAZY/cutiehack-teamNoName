@@ -40,7 +40,6 @@ int main(){
                 cout << "ERROR INPUT" << endl;
             }
         }
-
     }
 
     return 0;   
