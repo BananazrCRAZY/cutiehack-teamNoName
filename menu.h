@@ -9,8 +9,12 @@ class Menu{
     userInfo *user;
 
     public:
-    void showMenu();
-    Menu(userInfo* menuOption);
+        void showMenu();
+        Menu(userInfo* menuOption);
+        void showBudget();
+        void setBudget();
+        void showExpenses();
+        void addExpense();
 };
 
 #endif

@@ -17,3 +17,8 @@ string userInfo::getName(){
 double userInfo::getIncome(){
     return _income;
 }
+
+void userInfo::addCategory(string nameOfCategory, double percentBudget) {
+    Category c(nameOfCategory, 0, percentBudget, _income);
+    v.push_back(c);
+}

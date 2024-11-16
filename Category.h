@@ -18,7 +18,7 @@ class Category{
         double _remaining;
 
     public:
-        Category(string nameOfCategory = "NO_CATEGORY", double total = -1, double percentBudget = -1, double userIncome = -1);
+        Category(string nameOfCategory = "NO_CATEGORY", double total = 0, double percentBudget = -1, double userIncome = -1);
         
         // getters
         string getCategoryName() const;
