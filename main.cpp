@@ -28,21 +28,13 @@ int main(){
 
         bool answered = false;
         while (!answered) {
-            cout << "ENTER 1 to CONINUE\nENTER 2 to EXIT" << endl;
-            int answer = 0;
-            cin >> answer;
-            if (answer == 1) {
-                answered = true;
-            } else if (answer == 2) {
-                answered = true;
-                running = false;
-            } else {
-                cout << "ERROR INPUT" << endl;
+            
             }
         }
+
+    
     }
 
-    userInfo();
 
 
     return 0;   
