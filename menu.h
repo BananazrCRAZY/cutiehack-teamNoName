@@ -8,6 +8,6 @@ class Menu{
 
     public:
     void showMenu();
-}
+};
 
 #endif
