@@ -22,7 +22,7 @@ int main(){
     cin >> percent;
     cout << endl;
 
-    userInfo user = new userInfo(income, name);
+    userInfo *user = new userInfo(income, name);
 
     while (running) {
 
