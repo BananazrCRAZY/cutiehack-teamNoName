@@ -7,7 +7,7 @@ using namespace std;
 void Menu::showMenu(){
     int userInput;
 
-    cout << "HELLO " << user <<
+    cout << "HELLO " << user << endl;
 
     
 }
