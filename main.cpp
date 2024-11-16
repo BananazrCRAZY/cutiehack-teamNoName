@@ -2,6 +2,7 @@
 #include <vector>
 #include "userInfo.h"
 #include "Item.h"
+#include "menu.h"
 using namespace std;
 
 int main(){
@@ -23,12 +24,12 @@ int main(){
     cout << endl;
 
     userInfo *user = new userInfo(income, name);
-
+    Menu *menu = new Menu();
     while (running) {
 
         bool answered = false;
         while (!answered) {
-            
+                menu->showMenu();
             }
         }
 
