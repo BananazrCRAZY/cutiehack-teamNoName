@@ -159,7 +159,6 @@ void Menu::askInitialCategories() {
     system("clear");
 
     cout << "Great! Now please set percentages to indicate the percentage of your income to allocate to your budget." << endl;
-    cout << "Note: percentages must add up to 100." << endl;
 
     double userPercentage = 0;
     for (unsigned i = 0; i < user.v.size(); i++) {
