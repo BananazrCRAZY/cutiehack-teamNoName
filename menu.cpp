@@ -30,11 +30,11 @@ void Menu::showMenu() {
         if(userInput == 1){
             showBudget();
         } else if(userInput == 2){
-            
+            setBudget();
         } else if(userInput == 3){
-            
+            showExpenses();
         } else if(userInput == 4){
-            
+            addExpense();
         } else if(userInput == 5){
             running = false;
         } else {
@@ -59,15 +59,18 @@ void Menu::setBudget() {
         cout << "Input new Income: ";
         double newIncome = 0;
         cin >> newIncome;
+        cout << endl;
         user->setIncome(newIncome);
     } else if (answer == 2) {
         user->printIndexs();
         cout << "Input a number for the Category you wish to edit: ";
         unsigned index = 0;
         cin >> index;
+        cout << endl;
         cout << "Input a new budget %: ";
         double percent = 0;
         cin >> percent;
+        cout << endl;
         user->setPercent(percent, index);
     }
 }
@@ -77,6 +80,7 @@ void Menu::showExpenses() {
     cout << "Input a number for the Category you wish to see: ";
     unsigned index = 0;
     cin >> index;
+    cout << endl;
     cout << user->v.at(index) << endl;
 }
 
@@ -92,18 +96,31 @@ void Menu::addExpense() {
         cout << "Enter the name of the Category: ";
         string name;
         cin >> name;
+        cout << endl;
         cout << "Enter what % you would like to budget: ";
         double percent = 0;
         cin >> percent;
+        cout << endl;
         user->addCategory(name, percent);
     } else if (answer == 2) {
         user->printIndexs();
         cout << "Input a number for the Category you wish to edit: ";
         unsigned index = 0;
         cin >> index;
-        cout >> "Enter the name of the item: ";
+        cout << endl;
+        cout << "Enter the name of the item: ";
         string itemName;
         cin >> itemName;
-
+        cout << endl;
+        cout << "Enter the cost of the item: ";
+        double cost = 0;
+        cin >> cost;
+        cout << endl;
+        cout << "Enter item type: ";
+        string type;
+        cin >> type;
+        cout << endl;
+        Item it = Item(itemName, cost, type);
+        user->v.at(index).addItem(it);
     }
 }
