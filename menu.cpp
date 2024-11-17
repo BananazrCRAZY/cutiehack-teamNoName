@@ -58,15 +58,21 @@ void Menu::setBudget() {
     if (answer == 1) {
         cout << "Input new Income: ";
         double newIncome = 0;
+        cin >> newIncome;
         user->setIncome(newIncome);
     } else if (answer == 2) {
-        user->printBudgets();
+        user->printIndexs();
         cout << "Input a number for the Category you wish to edit: ";
         unsigned index = 0;
         cin >> index;
         cout << "Input a new budget %"
+        double percent = 0;
+        cin >> percent;
+        user->setPercent(percent, index);
     }
 }
 
-void Menu::showExpenses();
+void Menu::showExpenses() {
+    
+}
 void Menu::addExpense();

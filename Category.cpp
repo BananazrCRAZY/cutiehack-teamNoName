@@ -25,7 +25,14 @@ void Category::setTotal(double totalAmount) {
 }
 void Category::setPercentBudget(double percentOfBudget) {
     this->_percentBudget = percentOfBudget;
+    _remaining = _userIncome * _percentBudget;
 }
+
+void Category::setUserIncome(double newUserIncome) {
+    _userIncome = newUserIncome;
+    _remaining = _userIncome * _percentBudget;
+}
+
 
 // mutators
 

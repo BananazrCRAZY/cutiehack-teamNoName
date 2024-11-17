@@ -12,6 +12,7 @@ class userInfo {
         double _income;
         string _name;
         vector<Category> v; 
+        double totPercent;
     public:
         userInfo(double income = 0, string name = "noName");
         void setIncome(double income);
@@ -20,6 +21,8 @@ class userInfo {
         double getIncome();
         void addCategory(string nameOfCategory, double total, double percentBudget);
         void printBudgets();
+        void printIndexs();
+        void setPercent(double per, unsigned index);
 };
 
 #endif

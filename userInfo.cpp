@@ -1,6 +1,8 @@
 #include "userInfo.h"
 
-userInfo::userInfo(double income, string name) : _income(income), _name(name) {}
+userInfo::userInfo(double income, string name) : _income(income), _name(name) {
+    totPercent = 0;
+}
 
 void userInfo::setIncome(double income) {
     _income = income;
@@ -28,6 +30,16 @@ void userInfo::addCategory(string nameOfCategory, double percentBudget) {
 
 void userInfo::printBudgets() {
     for (unsigned i = 0; i < v.size(); i++) {
-        cout << i << ": " << v.at(i).getCategoryName() << ": $" << v.at(i).getRemaining() << " remaining" << endl;
+        cout << v.at(i).getCategoryName() << ": $" << v.at(i).getRemaining() << " remaining" << endl;
     }
+}
+
+void userInfo::printIndexs() {
+    for (unsigned i = 0; i < v.size(); i++) {
+        cout << i << ": " << v.at(i).getCategoryName() << " " << v.at(i).percentBudget() << "%" << endl;
+    }
+}
+
+void userInfo::setPercent(double per, unsigned index) {
+    v.at(index).setPercentBudget(per);
 }
