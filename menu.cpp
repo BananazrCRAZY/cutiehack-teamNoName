@@ -5,7 +5,8 @@
 
 using namespace std;
 
-Menu::Menu(userInfo menuOption) {
+
+Menu::Menu(userInfo menuOption){
     user = menuOption;
 }
 
@@ -13,7 +14,7 @@ void Menu::showMenu() {
     int userInput;
     bool running = true;
 
-    cout << "HELLO " << user->getName() << endl;
+    cout << "HELLO " << user.getName() << endl;
 
     while (running) {
         userInput = 0;
@@ -44,7 +45,7 @@ void Menu::showMenu() {
 }
 
 void Menu::showBudget() {
-    user->printBudgets();
+    user.printBudgets();
 }
 
 void Menu::setBudget() {
@@ -59,25 +60,25 @@ void Menu::setBudget() {
         cout << "Input new Income: ";
         double newIncome = 0;
         cin >> newIncome;
-        user->setIncome(newIncome);
+        user.setIncome(newIncome);
     } else if (answer == 2) {
-        user->printIndexs();
+        user.printIndexs();
         cout << "Input a number for the Category you wish to edit: ";
         unsigned index = 0;
         cin >> index;
         cout << "Input a new budget %: ";
         double percent = 0;
         cin >> percent;
-        user->setPercent(percent, index);
+        user.setPercent(percent, index);
     }
 }
 
 void Menu::showExpenses() {
-    user->printIndexs();
+    user.printIndexs();
     cout << "Input a number for the Category you wish to see: ";
     unsigned index = 0;
     cin >> index;
-    cout << user->v.at(index) << endl;
+    cout << user.v.at(index) << endl;
 }
 
 void Menu::addExpense() {
