@@ -6,6 +6,7 @@
 using namespace std;
 
 int main(){
+    system("clear");
     string name;
     double income = 0;
     double percent = 0;
@@ -22,7 +23,9 @@ int main(){
     userInfo user = userInfo(income, name);
     Menu menu = Menu(user);
 
-    menu->showMenu();
+    system("clear");
+    menu.showMenu();
 
+    system("clear");
     return 0;
     }   

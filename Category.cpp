@@ -9,7 +9,7 @@ string Category::getCategoryName() const {
 double Category::getTotal() const {
     return this->_total;
 }
-double Category::percentBudget() const {
+double Category::getPercentBudget() const {
     return this->_percentBudget;
 }
 double Category::getRemaining() const {
@@ -25,12 +25,12 @@ void Category::setTotal(double totalAmount) {
 }
 void Category::setPercentBudget(double percentOfBudget) {
     this->_percentBudget = percentOfBudget;
-    _remaining = _userIncome * _percentBudget;
+    _remaining = (_userIncome * _percentBudget) / 100;
 }
 
 void Category::setUserIncome(double newUserIncome) {
     _userIncome = newUserIncome;
-    _remaining = _userIncome * _percentBudget;
+    _remaining = (_userIncome * _percentBudget) / 100;
 }
 
 
@@ -41,6 +41,7 @@ void Category::setUserIncome(double newUserIncome) {
 */
 void Category::add(Item &item) {
     this->_items.push_back(item);
+    this->_remaining -= item.getPrice();
 }
 
 /*

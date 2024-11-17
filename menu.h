@@ -10,11 +10,13 @@ class Menu{
 
     public:
         void showMenu();
+        void askInitialCategories();
         Menu(userInfo menuOption);
         void showBudget();
         void setBudget();
         void showExpenses();
         void addExpense();
+        void exportExpenses(userInfo &user, string nameOfFile);
 };
 
 #endif

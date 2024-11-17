@@ -2,6 +2,7 @@
 #define USERINFO_H
 
 #include <iostream>
+#include <iomanip>
 #include "stdlib.h"
 #include "Category.h"
 #include <vector>

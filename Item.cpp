@@ -40,9 +40,9 @@ string Item::getCategory() const {
     return this->_category;
 }
 
-// time_t Item::getTime() const {
-//     return this->_timestamp;
-// }
+string Item::getTime() const {
+    return this->_timestamp;
+}
 
 // setters
 void Item::setName(string nameOfItem) {
