@@ -53,8 +53,9 @@ void Category::remove_back() {
 
 ostream & operator<<(ostream &o, const Category &rhs) {
 
+    o << rhs.getCategoryName() << ": " << endl;
+    
     for (unsigned i = 0; i < rhs._items.size(); i++) {
-        o << rhs.getCategoryName() << ": " << endl;
         o << rhs._items.at(i).getName() << ": $" << rhs._items.at(i).getPrice() << endl;
     }
 
