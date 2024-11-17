@@ -65,7 +65,7 @@ void Menu::setBudget() {
         cout << "Input a number for the Category you wish to edit: ";
         unsigned index = 0;
         cin >> index;
-        cout << "Input a new budget %"
+        cout << "Input a new budget %: ";
         double percent = 0;
         cin >> percent;
         user->setPercent(percent, index);
@@ -73,6 +73,10 @@ void Menu::setBudget() {
 }
 
 void Menu::showExpenses() {
+    user->printIndexs();
     
 }
-void Menu::addExpense();
+
+void Menu::addExpense() {
+
+}

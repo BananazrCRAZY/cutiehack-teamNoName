@@ -19,7 +19,7 @@ class userInfo {
         void setName(string name);
         string getName();
         double getIncome();
-        void addCategory(string nameOfCategory, double total, double percentBudget);
+        void addCategory(string nameOfCategory, double percentBudget);
         void printBudgets();
         void printIndexs();
         void setPercent(double per, unsigned index);
