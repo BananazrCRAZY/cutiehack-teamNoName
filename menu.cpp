@@ -96,13 +96,13 @@ void Menu::addExpense() {
         cout << "Enter what % you would like to budget: ";
         double percent = 0;
         cin >> percent;
-        user->addCategory(name, percent);
+        user.addCategory(name, percent);
     } else if (answer == 2) {
-        user->printIndexs();
+        user.printIndexs();
         cout << "Input a number for the Category you wish to edit: ";
         unsigned index = 0;
         cin >> index;
-        cout >> "Enter the name of the item: ";
+        cout << "Enter the name of the item: ";
         string itemName;
         cin >> itemName;
 
