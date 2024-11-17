@@ -30,13 +30,14 @@ void userInfo::addCategory(string nameOfCategory, double percentBudget) {
 
 void userInfo::printBudgets() {
     for (unsigned i = 0; i < v.size(); i++) {
-        cout << v.at(i).getCategoryName() << ": $" << v.at(i).getRemaining() << " remaining" << endl;
+        cout << v.at(i).getCategoryName() << ": $";
+        cout << setprecision(2) << fixed << v.at(i).getRemaining() << " remaining" << endl;
     }
 }
 
 void userInfo::printIndexs() {
     for (unsigned i = 0; i < v.size(); i++) {
-        cout << i << ": " << v.at(i).getCategoryName() << " " << v.at(i).percentBudget() << "%" << endl;
+        cout << i << ": " << v.at(i).getCategoryName() << " " << v.at(i).getPercentBudget() << "%" << endl;
     }
 }
 

@@ -11,19 +11,19 @@ using namespace std;
 class Category{
     private:
         string _categoryName;
-        vector<Item> _items;
         double _total;
         double _percentBudget;
         double _userIncome;
         double _remaining;
 
     public:
+        vector<Item> _items;
         Category(string nameOfCategory = "NO_CATEGORY", double total = 0, double percentBudget = -1, double userIncome = -1);
         
         // getters
         string getCategoryName() const;
         double getTotal() const;
-        double percentBudget() const;
+        double getPercentBudget() const;
         double getRemaining() const;
 
         // setters
