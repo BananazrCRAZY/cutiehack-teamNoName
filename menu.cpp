@@ -132,7 +132,7 @@ void Menu::addExpense() {
         cout << endl;
         cout << "Enter the name of the item: ";
         string itemName;
-        getline(cin, itemName);
+        cin >> itemName;
         cout << endl;
         cout << "Enter the cost of the item: ";
         double cost = 0;
