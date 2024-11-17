@@ -5,11 +5,11 @@
 
 using namespace std;
 
-Menu::Menu(userInfo* menuOption){
+Menu::Menu(userInfo menuOption) {
     user = menuOption;
 }
 
-void Menu::showMenu(){
+void Menu::showMenu() {
     int userInput;
     bool running = true;
 
@@ -74,9 +74,36 @@ void Menu::setBudget() {
 
 void Menu::showExpenses() {
     user->printIndexs();
-    
+    cout << "Input a number for the Category you wish to see: ";
+    unsigned index = 0;
+    cin >> index;
+    cout << user->v.at(index) << endl;
 }
 
 void Menu::addExpense() {
+    cout << "PRESS ONE OF THE FOLLOWING NUMBERS" << endl;
+    cout << "1: Create a Category" << endl;
+    cout << "2: Add an item" << endl;
 
+    int answer = 0;
+    cin >> answer;
+
+    if (answer == 1) {
+        cout << "Enter the name of the Category: ";
+        string name;
+        cin >> name;
+        cout << "Enter what % you would like to budget: ";
+        double percent = 0;
+        cin >> percent;
+        user->addCategory(name, percent);
+    } else if (answer == 2) {
+        user->printIndexs();
+        cout << "Input a number for the Category you wish to edit: ";
+        unsigned index = 0;
+        cin >> index;
+        cout >> "Enter the name of the item: ";
+        string itemName;
+        cin >> itemName;
+
+    }
 }

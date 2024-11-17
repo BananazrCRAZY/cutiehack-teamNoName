@@ -19,13 +19,10 @@ int main(){
     cin >> income;
     cout << endl;
 
-    userInfo *user = new userInfo(income, name);
-    Menu *menu = new Menu(user);
+    userInfo user = userInfo(income, name);
+    Menu menu = Menu(user);
 
     menu->showMenu();
-
-    delete user;
-    delete menu;
 
     return 0;
     }   

@@ -6,11 +6,11 @@
 class Menu{
     private:
     int userInput;
-    userInfo *user;
+    userInfo user;
 
     public:
         void showMenu();
-        Menu(userInfo* menuOption);
+        Menu(userInfo menuOption);
         void showBudget();
         void setBudget();
         void showExpenses();
