@@ -1,4 +1,4 @@
-*------------------* CutieSavers *------------------*
+------------------* CutieSavers *------------------
      A Terminal-Based Budget Tracking Application
 
 A UCR CutieHack project
