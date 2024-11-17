@@ -61,7 +61,7 @@ void Menu::setBudget() {
         double newIncome = 0;
         cin >> newIncome;
         cout << endl;
-        user->setIncome(newIncome);
+        user.setIncome(newIncome);
     } else if (answer == 2) {
         user.printIndexs();
         cout << "Input a number for the Category you wish to edit: ";
@@ -72,7 +72,7 @@ void Menu::setBudget() {
         double percent = 0;
         cin >> percent;
         cout << endl;
-        user->setPercent(percent, index);
+        user.setPercent(percent, index);
     }
 }
 
@@ -82,7 +82,7 @@ void Menu::showExpenses() {
     unsigned index = 0;
     cin >> index;
     cout << endl;
-    cout << user->v.at(index) << endl;
+    cout << user.v.at(index) << endl;
 }
 
 void Menu::addExpense() {
@@ -102,9 +102,9 @@ void Menu::addExpense() {
         double percent = 0;
         cin >> percent;
         cout << endl;
-        user->addCategory(name, percent);
+        user.addCategory(name, percent);
     } else if (answer == 2) {
-        user->printIndexs();
+        user.printIndexs();
         cout << "Input a number for the Category you wish to edit: ";
         unsigned index = 0;
         cin >> index;
@@ -122,6 +122,6 @@ void Menu::addExpense() {
         cin >> type;
         cout << endl;
         Item it = Item(itemName, cost, type);
-        user->v.at(index).addItem(it);
+        user.v.at(index).addItem(it);
     }
 }

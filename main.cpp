@@ -22,7 +22,7 @@ int main(){
     userInfo user = userInfo(income, name);
     Menu menu = Menu(user);
 
-    menu->showMenu();
+    menu.showMenu();
 
     return 0;
     }   
