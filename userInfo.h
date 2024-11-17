@@ -11,9 +11,9 @@ class userInfo {
     private:
         double _income;
         string _name;
-        vector<Category> v; 
         double totPercent;
     public:
+        vector<Category> v; 
         userInfo(double income = 0, string name = "noName");
         void setIncome(double income);
         void setName(string name);
